@@ -1,0 +1,15 @@
+application:
+  api:
+    ai:
+      gemini:
+        url:  https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_API_MODEL}:generateContent
+        model: ${GEMINI_API_MODEL}
+        key: ${GEMINI_API_KEY}
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1/
+  cors:
+    origins: http://localhost:3001
+
